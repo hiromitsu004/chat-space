@@ -10,15 +10,15 @@ usersテーブル
 - has_many :groups_users
 - has_many :messages
 
-groupテーブル
+groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :group
 - has_many :user
+- has_many :messages
 
 groups_usersテーブル
 |Column|Type|Options|
@@ -37,12 +37,10 @@ Messagesテーブル
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|send_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :send
 
 
 This README would normally document whatever steps are necessary to get the

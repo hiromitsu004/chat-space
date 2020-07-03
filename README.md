@@ -9,16 +9,16 @@ usersテーブル
 ### Association
 - has_many :groups_users
 - has_many :messages
+- has_many :groups, though :groups_users
 
 groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_name|string|null: false|
 
 ### Association
-- has_many :group
-- has_many :user
+- has_many :groups
+- has_many :users
 - has_many :messages
 
 groups_usersテーブル

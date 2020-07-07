@@ -35,6 +35,11 @@
   background-color: #253141;
   display: flex;
   justify-content: end;
+  .ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 .Leftheader{
@@ -42,18 +47,10 @@
   color: #ffffff;
   display: flex;
   justify-content: end;
+  .__icon-List{
+    margin-left: 5px;
+  }
 }
-
-.Leftheader__icon-List{
-  margin-left: 5px;
-}
-.ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
 
 .side-bar__group-list{
   background-color: #2f3e51;
@@ -62,23 +59,20 @@
 }
 
 .group-name{
-  
-}
-
-.group-nameList{
-  color: #ffffff;
+  .group-nameList{
+    color: #ffffff;
   font-weight: bold;
   padding-top:20px;
   padding-bottom: 5px;
   padding-left: 20px;
   font-size: 15px;
-}
-
-.group-message{
-  color: #ffffff;
+  } 
+  .group-message{
+    color: #ffffff;
   font-weight: bold;
   padding-left: 20px;
   font-size: 11px;
+  }
 }
 
 .chat-main__group-info{
@@ -157,23 +151,21 @@ a {
   width: 100%;
   display: flex;
   position: relative;
-}
-
-.input-text{
-  height: 40px;
-  padding: 0 45px 0 15px;
-  width: 80%;
-}
-
-.sub{
-  background-color: #38aef0;
-  color: #ffffff;
-  border: none;
-  padding: 0 30px;
-  margin-right: 40px;
-  font-size: 16px;
-  margin-left: 15px;
-  height: 40px;
+  .input-text{
+    height: 40px;
+    padding: 0 45px 0 15px;
+    width: 80%;
+  }
+  .sub{
+    background-color: #38aef0;
+    color: #ffffff;
+    border: none;
+    padding: 0 30px;
+    margin-right: 40px;
+    font-size: 16px;
+    margin-left: 15px;
+    height: 40px;
+  }
 }
 
 .input-box__image{

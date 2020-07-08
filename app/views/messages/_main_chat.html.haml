@@ -1,34 +1,34 @@
-.main
+.chat-main
   .chat-main__group-info
-    .chat-name
+    .chat-main__group-info__name
       test
-      .chat-subname
-        Member :masa
-    %a{ href: '#'}
-      Edit
+      .chat-main__group-info__name__sub
+        Member :masa 
+    .chat-main__group-info__edit
+      = link_to "Edit", "#"
 
-  .chat-main__message-list
-    .chat-message
-      .MessageInfo-name
+  .chat-list
+    .chat-list__message
+      .chat-list__message__Info-name
         masa
-      .MessageInfo-date
+      .chat-list__message__Info-date
         2020/7/6(mon)17:59:00
-    .MessageInfo 
-      .MessageInfo-lists
+    .chat-list__Info
+      .chat-list__Info__lists
         おはよう！
-    .chat-message
-      .MessageInfo-name
+    .chat-list__message
+      .chat-list__message__Info-name
         masa
-      .MessageInfo-date
+      .chat-list__message__Info-date
         2020/7/6(mon)17:56:01
-    .MessageInfo
-      .MessageInfo-lists
+    .chat-list__Info
+      .chat-list__Info__lists
         今日は夜から南
   .footer
-    .chat-main__message-form
-      .message-form
-        %input.input-text{:placeholder => "type a message", :type => "text"}/
-        %input.sub{:type => "submit", :value => "Send"}/
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input.hidden{type: "file"}
+    .footer__message-form
+      %input.input-text{ placeholder: "type a message", type: "text"}/
+      %label{class: "input-box__image"}
+        =icon('fas', 'image')
+        %input.hidden{type: "file"}
+    %input.sub{ type: "submit", value: "Send"}/
+

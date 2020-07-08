@@ -1,19 +1,18 @@
 .side-bar
-  .side-bar__user-name
-    .top-items
-      .top-items__name
-        .side-box
-          .side-name
-            masa
-          .top-icons
-            %ul.Leftheader
-              %ll.Leftheader__iconList
-              = icon('fas', 'edit')
-              %ll.Leftheader__iconList
-              = icon('fas', 'cog')
+  .side-bar__top-items
+    .side-bar__top-items__side-box
+      .side-bar__top-items__side-box__name masa
+      .side-bar__top-items__side-box__icons
+        %ul.Leftheader
+          %li.Leftheader__iconList
+            = icon('fas', 'edit')
+          %li.Leftheader__iconList
+            = icon('fas', 'cog')
 
-  .side-bar__group-list
-    .group-name
-      .group-nameList techcamp
-      .group-message 新着メッセージがありません
+  .side-bar__group
+    .side-bar__group__name
+      .side-bar__group__name__nameList
+        techcamp
+      .side-bar__group__name__message 
+        新着メッセージがありません
       

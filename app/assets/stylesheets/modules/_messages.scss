@@ -6,20 +6,19 @@
   display: flex;
 }
 .side-bar {
+  width: 300px;
   &__top-items {
     background-color: #253141;
-    height: 100px;
-    width: 300px;
+    height:100px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     &__side-box {
-      height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
       background-color: #253141;
-    
       &__name{
         font-size: 16px;
         font-weight: bold;
@@ -108,12 +107,16 @@
 }
 
   .chat-list{
-    height: calc(100% - 190px);
     width: calc(100vw - 300px);
     background-color:#fafafa;
-    padding: 35px 0 30px 40px;
-    &__message{
+    padding: 35px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow : auto;
+    &__main{
       display: flex;
+    }
+    &__message{
+      height: calc(100vh - 100px - 90px);
       &__Info-name{
         // padding-left: 40px;
         color: #333333;
@@ -126,7 +129,6 @@
         color: #999999;
         font-size: 12px;
         padding-left: 40px;
-        float: right;
       }
     &__Info{
       &__lists{
@@ -140,25 +142,23 @@
   }
 
   .footer{
-    padding: 30px 10px 0 10px;
+    padding: 20px 50px 20px 40px;
     height: 90px;
     background-color: #d2d2d2;
-    display: flex;
     &__message-form{
       width: 100%;
       position: relative;
-      .input-text{
+      .footer__inputContent{
         height: 40px;
         padding: 0 45px 0 15px;
         width: 100%;
       }
     }
-    &__form{
-      
+    .Form{
+      display: flex;
   }
 
-
-    .sub{
+    .footer__submit{
       background-color: #38aef0;
       color: #ffffff;
       border: none;
@@ -168,7 +168,7 @@
     }
   }
 
-  .input-box__image{
+  .footer__icon{
     width: 30px;
     position: absolute;
     right: 10px;
@@ -176,5 +176,7 @@
   }
 
   .hidden{
-    display: none;
+  }
+  .Hidden{
+  display: none;
   }

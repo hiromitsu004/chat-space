@@ -1,0 +1,12 @@
+.chat-list__content
+  .chat-list__main 
+    .chat-list__message__Info-name
+      = message.user.name
+    .chat-list__message__Info-date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-list__Info
+    .chat-list__Info__lists
+      - if message.content.present?
+        %p.chat-list__Info
+          = message.content
+      = image_tag message.image.url, class: 'chat-list__info' if message.image.present?

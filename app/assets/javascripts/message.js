@@ -57,7 +57,6 @@ $(function(){
     })
 
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.chat-list').append(html);
       $('form')[0].reset();

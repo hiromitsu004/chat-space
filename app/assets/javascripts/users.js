@@ -17,7 +17,6 @@ $(function(){
                  `;
      $("#UserSearchResult").append(html);
   }
-      
   function addMember(name, id) {
     let html = `
                 <div class="ChatMember">
@@ -55,7 +54,7 @@ $(function(){
      .fail(function() {
        alert("通信エラーです。ユーザーが表示できません。");
      });
-     
+
   });
   $("#UserSearchResult").on("click", ".ChatMember__add", function() {
     const userName = $(this).attr("data-user-name");
@@ -64,7 +63,6 @@ $(function(){
     addMember(userName, userId);
   });
   $(".ChatMembers").on("click", ".ChatMember__remove", function() {
-    
     $(this).parent().remove();
   });
 });

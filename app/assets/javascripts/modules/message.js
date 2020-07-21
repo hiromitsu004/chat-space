@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if (message.image) {
       let html = 
-        `<div class="chat-list__content">
+        `<div class="chat-list__content" data-message-id=${message.id}>
           <div class="chat-list__main>
             <div class="chat-list__message__Info-name">
               ${message.user_name}
@@ -22,7 +22,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="chat-list__content">
+      `<div class="chat-list__content" data-message-id=${message.id}>
         <div class="chat-list__main>
           <div class="chat-list__message__Info-name">
               ${message.user_name}
@@ -55,14 +55,20 @@ $(function(){
       processData: false,
       contentType: false
     })
-
     .done(function(data){
       let html = buildHTML(data);
-      $('.chat-list').append(html);
+      $('.chat-list').append(html);      
       $('form')[0].reset();
       $('.chat-list').animate({ scrollTop: $('.chat-list')[0].scrollHeight});
+      $('.Form__submit').prop("disabled", false);
     })
-    .fall(function(){
+      
+      // let html = buildHTML(data);
+      // $('.chat-list').append(html);
+      // $('form')[0].reset();
+      // $('.chat-list').animate({ scrollTop: $('.chat-list')[0].scrollHeight});
+      //removeAttrを使って２通目送信ができるようにしましょう
+    .fail(function(){
          alert("メッセージ送信に失敗しました")
     });
   });

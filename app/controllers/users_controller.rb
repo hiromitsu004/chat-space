@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       format.html
       format.json
     end
-    #binding.pry
   end
 
   def edit

@@ -31,7 +31,6 @@ $(function(){
 
   $("#UserSearch__field").on("keyup", function(){
     let input = $("#UserSearch__field").val();
-    console.log(input);
 
     $.ajax({
       type: "GET",
@@ -43,7 +42,6 @@ $(function(){
        $("#UserSearchResult").empty();
        if (users.length !== 0) {
          users.forEach(function(user) {
-          console.log(user);
            addUser(user);
          });
        } else if (input.length == 0) {
@@ -64,7 +62,6 @@ $(function(){
     addMember(userName, userId);
   });
   $(".ChatMembers").on("click", ".ChatMember__remove", function() {
-    
     $(this).parent().remove();
   });
 });

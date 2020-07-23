@@ -2,7 +2,8 @@ $(function(){
   function buildHTML(message){
     if (message.image) {
       let html = 
-        `<div class="chat-list__content" data-message-id=${message.id}>
+      `<div class="MessageBox" data-message-id=${message.id}>
+        <div class="chat-list__content">
           <div class="chat-list__main>
             <div class="chat-list__message__Info-name">
               ${message.user_name}
@@ -16,29 +17,31 @@ $(function(){
               <p class="chat-list__Info">
                 ${message.content}
               </p>
-              img class="chat-list__info" src="${message.image}">
+              <img class="chat-list__info" src="${message.image}">
           </div>
-        </div>`
+        </div>
+    </div>`
       return html;
     } else {
       let html =
-      `<div class="chat-list__content" data-message-id=${message.id}>
-        <div class="chat-list__main>
-          <div class="chat-list__message__Info-name">
+      `<div class="MessageBox" data-message-id=${message.id}>
+        <div class="chat-list__content">
+          <div class="chat-list__main>
+            <div class="chat-list__message__Info-name">
               ${message.user_name}
-          </div>
-          <div class="chat-list__message__Info-date">
+            </div>
+            <div class="chat-list__message__Info-date">
               ${message.created_at}
+            </div>
           </div>
-        
-        <div class="chat-list__Info">
-          <div class="chat-list__Info__lists">
-            <p class="chat-list__Info">
+          <div class="chat-list__Info">
+            <div class="chat-list__Info__lists">
+              <p class="chat-list__Info">
                 ${message.content}
-            </p>
+              </p>
           </div>
         </div>
-      </div>`
+    </div>`
       return html;
     };
   }
@@ -60,7 +63,7 @@ $(function(){
       $('.chat-list').append(html);      
       $('form')[0].reset();
       $('.chat-list').animate({ scrollTop: $('.chat-list')[0].scrollHeight});
-      $('.Form__submit').prop("disabled", false);
+      $('.footer__submit').prop("disabled", false);
     })
       
       // let html = buildHTML(data);

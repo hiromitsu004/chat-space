@@ -4,7 +4,7 @@ $(function(){
       let html = 
       `<div class="MessageBox" data-message-id=${message.id}>
         <div class="chat-list__content">
-          <div class="chat-list__main>
+          <div class="chat-list__main">
             <div class="chat-list__message__Info-name">
               ${message.user_name}
             </div>
@@ -27,7 +27,7 @@ $(function(){
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
         <div class="chat-list__content">
-          <div class="chat-list__main>
+          <div class="chat-list__main">
             <div class="chat-list__message__Info-name">
               ${message.user_name}
             </div>

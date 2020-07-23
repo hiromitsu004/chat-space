@@ -18,9 +18,10 @@ $(function(){
                 ${message.content}
               </p>
               <img class="chat-list__info" src="${message.image}">
+            </div>
           </div>
         </div>
-    </div>`
+      </div>`
       return html;
     } else {
       let html =
@@ -39,6 +40,7 @@ $(function(){
               <p class="chat-list__Info">
                 ${message.content}
               </p>
+            </div>
           </div>
         </div>
     </div>`
